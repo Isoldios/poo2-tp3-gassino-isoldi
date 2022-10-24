@@ -1,5 +1,5 @@
 function Letrero(){
-    this.encendidas;
+    this.encendidas=0;
     this.totalEncendidas= function(){
         return this.encendidas;
     }
