@@ -1,7 +1,24 @@
+const Foco = require("./Foco");
+
 function Letrero(){
-    this.encendidas=0;
+    this.luces = new Array(100);
+    for (i=0;i<100;i++){
+        var lista=new Array(100);
+        for (j=0;j<100;j++){
+            lista[j]=new Foco();
+        }
+        this.luces[i]=lista;
+    }
+
     this.totalEncendidas= function(){
-        return this.encendidas;
+        var encendidas=0;
+        this.luces.forEach(fila=>{
+            fila.forEach(columna=>{
+                if (columna.encendido==true)
+                    encendidas++;
+            });
+        });
+        return encendidas;
     }
     this.ordenarCoordenadas=function(cord1,cord2){
         if (cord1[0]>cord2[0] || cord1[1]>cord2[1]){
@@ -15,8 +32,11 @@ function Letrero(){
     }
     this.encenderLuces = function(cord1, cord2){
         this.ordenarCoordenadas(cord1,cord2);
-        var cantidad = (cord2[0]-cord1[0]+1)*(cord2[1]-cord1[1]+1);
-        this.encendidas+=cantidad;
+        for (i=cord1[0];i<=cord2[0];i++){
+            for (j=cord1[1];j<=cord2[1];j++){
+                this.luces[i][j].encender();
+            }
+        }
     }
 }
 

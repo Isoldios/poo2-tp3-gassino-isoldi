@@ -23,4 +23,3 @@ test("Cuantas luces hay encendidas luego de encender las mismas luces dos veces"
     letrero.encenderLuces([3,3],[4,4]);
     expect(letrero.totalEncendidas()).toBe(4);
 });
-
