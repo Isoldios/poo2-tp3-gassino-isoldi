@@ -1,6 +1,11 @@
 function Letrero(){
-    this.totalEncendidas= ()=>{
+    this.totalEncendidas= function(){
         return 0;
+    }
+    this.encenderLuces = function(){
+        this.totalEncendidas= function(){
+            return 1;
+        }
     }
 }
 
