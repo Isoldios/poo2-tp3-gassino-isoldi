@@ -24,9 +24,9 @@ test("Cuantas luces hay encendidas luego de encender las mismas luces dos veces"
     expect(letrero.totalEncendidas()).toBe(4);
 });
 
-test("Cuantas luces hay encendidas luego de encender las mismas luces dos veces",()=>{
+test("Cuantas luces hay encendidas luego de encender una misma luz dos veces pero el resto se enciende",()=>{
     const letrero = new Letrero();
     letrero.encenderLuces([3,3],[4,4]);
     letrero.encenderLuces([5,5],[4,4]);
-    expect(letrero.totalEncendidas()).toBe(4);
+    expect(letrero.totalEncendidas()).toBe(7);
 });
