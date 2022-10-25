@@ -38,13 +38,14 @@ function Letrero(){
             }
         }
     }
-}
-this.apagarLuces = function(cord1, cord2){
-    this.ordenarCoordenadas(cord1,cord2);
-    for (i=cord1[0];i<=cord2[0];i++){
-        for (j=cord1[1];j<=cord2[1];j++){
-            this.luces[i][j].apagar();
+    this.apagarLuces = function(cord1, cord2){
+        this.ordenarCoordenadas(cord1,cord2);
+        for (i=cord1[0];i<=cord2[0];i++){
+            for (j=cord1[1];j<=cord2[1];j++){
+                this.luces[i][j].apagar();
+            }
         }
     }
 }
+
 module.exports = Letrero;
