@@ -7,7 +7,7 @@ function Foco() {
     }
     this.apagar=function(){
         if(this.intensidad>0)
-            this.intensidad-=1;
+            this.intensidad--;
     }
     // this.encendido = false;
     
