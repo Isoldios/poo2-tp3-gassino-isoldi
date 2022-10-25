@@ -4,6 +4,9 @@ function Foco() {
     this.encender=function(){
         this.encendido=true;
     }
+    this.apagar=function(){
+        this.encendido=false;
+    }
 }
 
 module.exports=Foco;
