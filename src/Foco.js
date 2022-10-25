@@ -2,10 +2,12 @@ function Foco() {
     this.intensidad= 0;
     
     this.encender=function(){
-        this.intensidad++;
+        if(this.intensidad<10)
+            this.intensidad++;
     }
     this.apagar=function(){
-        this.intensidad-=1;
+        if(this.intensidad>0)
+            this.intensidad-=1;
     }
     // this.encendido = false;
     

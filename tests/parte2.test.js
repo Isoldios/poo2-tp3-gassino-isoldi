@@ -38,3 +38,9 @@ test("La intensidad de las luces luego de encender 2 veces y disminuirle una",()
     foco.apagar();
     expect(foco.intensidad).toBe(1);
 });
+
+test("La intensidad de las luces de un cuadrado despues de aumentarle en 2 unidades",()=>{
+    const letrero=new Letrero();
+    letrero.encenderLuces([5,5],[6,6])
+    expect(letrero.totalEncendidas()).toBe(4);
+});
