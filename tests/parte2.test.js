@@ -23,3 +23,10 @@ test("La cantidad de luces prendidas luego de subirle la intensidad de un cuadra
     letrero.encenderLuces([0,0],[1,1]);
     expect(letrero.totalEncendidas()).toBe(4);
 });
+
+test("La intensidad de las luces luego de encender 2 veces",()=>{
+    const foco=new Foco();
+    foco.encender();
+    foco.encender();
+    expect(foco.intensidad).toBe(2);
+});
