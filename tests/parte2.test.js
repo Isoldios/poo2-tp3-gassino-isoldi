@@ -16,3 +16,10 @@ test("La cantidad de luces prendidas luego de encender un cuadrado",()=>{
     letrero.encenderLuces([0,0],[1,1]);
     expect(letrero.totalEncendidas()).toBe(4);
 });
+
+test("La cantidad de luces prendidas luego de subirle la intensidad de un cuadrado a 2",()=>{
+    const letrero=new Letrero();
+    letrero.encenderLuces([0,0],[1,1]);
+    letrero.encenderLuces([0,0],[1,1]);
+    expect(letrero.totalEncendidas()).toBe(4);
+});
