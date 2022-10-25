@@ -52,3 +52,10 @@ test("La intensidad de las luces de un cuadrado luego prenderlas y apagarlas",()
     letrero.apagarLuces([5,5],[6,6]);
     expect(letrero.totalEncendidas()).toBe(0);
 });
+
+test("La intensidad de las luces de un cuadrado luego de aumentarle en 3 unidades",()=>{
+    const letrero=new Letrero();
+    letrero.encenderLuces([5,5],[6,6]);
+    letrero.cambiarEstado([5,5],[6,6]);
+    expect(letrero.totalEncendidas()).toBe(0);
+});
