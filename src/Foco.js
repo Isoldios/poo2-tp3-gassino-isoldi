@@ -1,6 +1,9 @@
 function Foco() {
     this.intensidad= 0;
     
+    this.encender=function(){
+    this.intensidad++;
+    }
     // this.encendido = false;
     
     // this.encender=function(){
