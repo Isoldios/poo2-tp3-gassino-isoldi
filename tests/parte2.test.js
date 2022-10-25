@@ -57,5 +57,5 @@ test("La intensidad de las luces de un cuadrado luego de aumentarle en 3 unidade
     const letrero=new Letrero();
     letrero.encenderLuces([5,5],[6,6]);
     letrero.cambiarEstado([5,5],[6,6]);
-    expect(letrero.totalEncendidas()).toBe(0);
+    expect(letrero.totalEncendidas()).toBe(4);
 });
