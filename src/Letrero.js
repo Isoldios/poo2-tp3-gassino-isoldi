@@ -27,6 +27,17 @@ function Letrero(){
         }
     }
 
+    this.totalEncendidas= function(){
+        var encendidas=0;
+        this.luces.forEach(fila=>{
+            fila.forEach(columna=>{
+                if (columna.intensidad>0 && columna.intensidad<11)
+                    encendidas++;
+            });
+        });
+        return encendidas;
+    }
+
     // this.totalEncendidas= function(){
     //     var encendidas=0;
     //     this.luces.forEach(fila=>{
