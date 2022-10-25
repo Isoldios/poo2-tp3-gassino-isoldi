@@ -10,3 +10,9 @@ test("La cantidad de luces prendidas solo declarando el letrero son 0",()=>{
     const letrero=new Letrero();
     expect(letrero.totalEncendidas()).toBe(0);
 });
+
+test("La cantidad de luces prendidas luego de encender un cuadrado",()=>{
+    const letrero=new Letrero();
+    letrero.encenderLuces([0,0],[1,1]);
+    expect(letrero.totalEncendidas()).toBe(4);
+});
