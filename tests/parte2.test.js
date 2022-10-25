@@ -36,5 +36,5 @@ test("La intensidad de las luces luego de encender 2 veces y disminuirle una",()
     foco.encender();
     foco.encender();
     foco.apagar();
-    expect(foco.intensidad).toBe(2);
+    expect(foco.intensidad).toBe(1);
 });
