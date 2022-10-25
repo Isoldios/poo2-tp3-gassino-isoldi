@@ -35,5 +35,5 @@ test("Cuantas luces hay encendidas luego de encender y apagar",()=>{
     const letrero = new Letrero();
     letrero.encenderLuces([3,3],[4,4]);
     letrero.apagarLuces([3,3],[4,4]);
-    expect(letrero.totalEncendidas()).toBe(0);
+    expect(letrero.totalEncendidas()).toBe(0); 
 });
