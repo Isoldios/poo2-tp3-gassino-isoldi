@@ -30,3 +30,11 @@ test("La intensidad de las luces luego de encender 2 veces",()=>{
     foco.encender();
     expect(foco.intensidad).toBe(2);
 });
+
+test("La intensidad de las luces luego de encender 2 veces y disminuirle una",()=>{
+    const foco=new Foco();
+    foco.encender();
+    foco.encender();
+    foco.apagar();
+    expect(foco.intensidad).toBe(2);
+});
