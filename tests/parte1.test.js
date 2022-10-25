@@ -43,3 +43,10 @@ test("Editar el estado de un cuadrado de apagado a encendido",()=>{
     letrero.cambiarEstado([0,0],[1,1]);
     expect(letrero.totalEncendidas()).toBe(4);
 });
+
+test("Editar el estado de un cuadrado de apagado a encendido y viceversa",()=>{
+    var letrero = new Letrero();
+    letrero.cambiarEstado([0,0],[1,1]);
+    letrero.cambiarEstado([0,0],[1,1]);
+    expect(letrero.totalEncendidas()).toBe(0);
+});
