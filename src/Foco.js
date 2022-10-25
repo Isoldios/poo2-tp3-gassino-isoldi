@@ -7,6 +7,9 @@ function Foco() {
     this.apagar=function(){
         this.encendido=false;
     }
+    this.cambiar=function(){
+        this.encendido=!this.encendido;
+    }
 }
 
 module.exports=Foco;
