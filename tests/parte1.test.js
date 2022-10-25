@@ -50,3 +50,9 @@ test("Editar el estado de un cuadrado de apagado a encendido y viceversa",()=>{
     letrero.cambiarEstado([0,0],[1,1]);
     expect(letrero.totalEncendidas()).toBe(0);
 });
+
+test("Validar los limites del letrero",()=>{
+    var letrero = new Letrero();
+    letrero.encenderLuces([99,99],[100,100]);
+    expect(letrero.totalEncendidas()).toBe(1);
+});
