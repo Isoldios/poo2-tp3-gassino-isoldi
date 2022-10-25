@@ -37,3 +37,7 @@
 //     letrero.apagarLuces([3,3],[4,4]);
 //     expect(letrero.totalEncendidas()).toBe(0);
 // });
+
+test("test",()=>{
+    expect(1+1).toBe(2);
+});
