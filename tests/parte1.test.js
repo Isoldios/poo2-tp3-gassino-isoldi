@@ -37,3 +37,9 @@ test("Cuantas luces hay encendidas luego de encender y apagar una luz",()=>{
     letrero.apagarLuces([3,3],[4,4]);
     expect(letrero.totalEncendidas()).toBe(0); 
 });
+
+test("Editar el estado de un cuadrado de apagado a encendido",()=>{
+    var letrero = new Letrero();
+    letrero.cambiar([0,0],[1,1]);
+    expect(letrero.totalEncendidas()).toBe(4);
+});
